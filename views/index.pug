@@ -1,14 +1,9 @@
 extends layout
 
-block layout-content
-    //- div.View
-    //-     h1.Banner BANNER CONTENT
-    //-     div.Message
-    //-     div.Title
-    //-         h1 Food For Devs
-    //-     span.Details DETAILS
-    //-     div.NavButtons
-    //-     a(href="/user")
-    //-         div.NavButton USER
-    div.View
-        h1.test Hello
+block main-content
+    main.container
+        div.View
+            h1.test Welcome!
+
+            a.btn.btn-primary(type="button", href="/user") Click me!
+
