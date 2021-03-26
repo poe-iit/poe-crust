@@ -24,12 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
  */
 app.get("/", (req, res) => {
     // render homepage
-    res.render("index", { title: "Home" });
-});
-
-app.get("/user", (req, res) => {
-    // render homepage
-    res.render("index", { title: "User" });
+    res.render("index", { title: "Dashboard" });
 });
 
 /*
