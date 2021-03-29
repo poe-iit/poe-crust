@@ -128,3 +128,39 @@ p.navbar-header {
 .navbar li span {
     margin-right: 12px;
 }
+
+/*
+ *  Main Content
+ */
+main {
+    margin-top: 25px;
+    padding-left: 275px;
+}
+
+.table {
+    margin-bottom: 0;
+    color: #666;
+}
+
+.table td,
+.table th {
+    border-color: #dee2e6;
+}
+
+.table thead th {
+    border: none;
+}
+
+.table-striped tbody tr {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border-color: #dee2e6;
+}
+table {
+    font-size: 0.9em;
+    color: #666;
+}

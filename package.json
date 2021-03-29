@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "promise": "^7.3.1",
+    "promises": "^0.2.5",
     "pug": "^3.0.2"
   }
 }
