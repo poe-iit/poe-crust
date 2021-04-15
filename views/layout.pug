@@ -3,10 +3,14 @@ doctype html
 html
     include includes/head.pug
 
-    body
-        include includes/nav.pug
+    body.row.p-0.m-0
+        section.col-lg-2.p-0.sidebar-pad
+            include includes/sidenav.pug
 
-        block main-content
+        section.col.p-0
+            include includes/topnav.pug
+
+            block main-content
 
     include includes/footer.pug
 

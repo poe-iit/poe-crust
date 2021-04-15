@@ -1,52 +1,22 @@
 extends layout
 
 block main-content
-    main
-        section#server.row
-            div.col-lg-3
-                if !connected
-                        div#connect.card
-                            header.card-header.d-flex.align-items-center
-                                p.h1 Connect to a Server
-                            div.card-body
-                                form.form-inline(action='/connect', method='post')
-                                    div.form-group
-                                        label Address:
-                                        input.mr-3.form-control(type='text', placeholder='http://127.0.0.1', name='address')
-                                    div.form-group.py-2
-                                        label Port:
-                                        input.mr-3.form-control(type='text', placeholder='8080', name='port')
-                                    div.form-group.py-2
-                                        input.btn.btn-primary(type='submit', value='Connect')
-                else
-                        div#system.card
-                            header.card-header.d-flex.align-items-center
-                                p.h1 Server Info
-                            div.card-body
-                                p Address: #{address}
-                                p Uptime: 12 hours, 4 minutes, 40 seconds
-                                p Last Updated: 56 seconds ago.
-                                a.btn.btn-danger(href='/disconnect') Disconnect
-        if connected
-            section#nodes.row
-                div.col-lg-3
-                    div.card
-                        header.card-header
-                            p.h1 Nodes
-                        div.card-body
-                            div.table-responsive
-                                table.table.table-striped.table-hover
-                                    thead
-                                        tr
-                                            th #
-                                            th Location
-                                            th IP Address
-                                            th Connections
+    main.row.m-0
+        section#left.col-lg-5.left-col-pad
+            if !connected
+                div#system-row.row.mx-0
+                    include cards/connect.pug
+            else
+                div#system-row.row.mx-0
+                    include cards/system.pug
 
-                                    tbody
-                                        each node in nodeList
-                                            tr
-                                                td #{node.id}
-                                                td #{node.name}
-                                                td #{node.ipaddress}
-                                                td #{node.connections}
+                div#nodes-row.row.mx-0.middle-row-pad
+                    include cards/nodes.pug
+
+                div#logs-row.row.mx-0
+                    include cards/logs.pug
+
+        section#right.col.right-col-pad
+            if connected
+                div.row.mx-0.full-height-row
+                    include cards/building.pug

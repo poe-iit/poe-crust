@@ -1,0 +1,17 @@
+header.row.m-0
+    nav.navbar
+        section.container-fluid
+            div.d-flex.align-items-center.justify-content-between
+                p.navbar-header Dashboard
+
+                ul.list-unstyled.d-flex.flex-md-row.align-items-md-center
+                    li.nav-item.dropdown
+                        a#notifications(rel='nofollow', data-target='#', href='#', data-toggle='dropdown', aria-haspopup="true", aria-expanded="false").nav-link
+                            i.fa.fa-bell
+                        ul.dropdown-menu(aria-labelledby='notifications')
+                            li
+                                a.dropdown-item(rel='nofollow', href='#') Hello
+                    li.nav-item
+                        a(href='/login').nav-link
+                            span.d-none.d-sm-inline-block Logout
+                            i.fa.fa-external-link

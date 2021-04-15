@@ -28,7 +28,6 @@ app.use(express.json());
  * Routes Definitions
  */
 app.get("/", async (req, res) => {
-    console.log(connected);
     let pageData = { title: 'Home', connected: connected };
     if (connected) {
         // get system status
