@@ -1,0 +1,16 @@
+div#system.card
+    header.card-header.d-flex.align-items-center
+        p.h1 Server Information
+    div.card-body.table-responsive
+        table.table.table-hover.mb-3
+            tr
+                td.h2 Address:
+                td #{address}
+            tr
+                td.h2 Uptime:
+                td #{'12 hours, 4 minutes, 40 seconds'}
+            tr
+                td.h2 Last Updated:
+                td #{'56 seconds ago.'}
+        footer.text-center
+            a.btn.btn-danger(href='/disconnect') Disconnect

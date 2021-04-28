@@ -1,0 +1,13 @@
+div#connect.card
+    header.card-header.d-flex.align-items-center
+        p.h1 Connect to a Server
+    div.card-body
+        form.form-inline(action='/connect', method='post')
+            div.form-group
+                label Address:
+                input.mr-3.form-control(type='text', placeholder='http://127.0.0.1', name='address')
+            div.form-group.py-2
+                label Port:
+                input.mr-3.form-control(type='text', placeholder='8080', name='port')
+            div.form-group.py-2
+                input.btn.btn-primary(type='submit', value='Connect')

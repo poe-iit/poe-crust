@@ -1,0 +1,19 @@
+div.card
+    header.card-header
+        p.h1 Nodes
+    div.card-body.table-responsive
+        table.table.table-striped.table-hover
+            thead
+                tr
+                    th #
+                    th Location
+                    th IP Address
+                    th Connections
+
+            tbody
+                each node in nodeList
+                    tr
+                        td #{node.id}
+                        td #{node.name}
+                        td #{node.ipaddress}
+                        td #{node.connections}

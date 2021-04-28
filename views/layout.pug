@@ -1,14 +1,16 @@
 block variables
 doctype html
 html
-    head
-        meta(charset="utf-8")
-        link(rel="shortcut icon", href="/favicon.ico")
-        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-        meta(name="theme-color", content="#000000")
-        title #{title} | CRUST TEST
-        link(rel="stylesheet" href="/style.css")
-    body
-        div#root
-        block layout-content
+    include includes/head.pug
+
+    body.row.p-0.m-0
+        section.col-lg-2.p-0.sidebar-pad
+            include includes/sidenav.pug
+
+        section.col.p-0
+            include includes/topnav.pug
+
+            block main-content
+
+    include includes/footer.pug
 

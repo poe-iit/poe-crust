@@ -1,14 +1,22 @@
 extends layout
 
-block layout-content
-    //- div.View
-    //-     h1.Banner BANNER CONTENT
-    //-     div.Message
-    //-     div.Title
-    //-         h1 Food For Devs
-    //-     span.Details DETAILS
-    //-     div.NavButtons
-    //-     a(href="/user")
-    //-         div.NavButton USER
-    div.View
-        h1.test Hello
+block main-content
+    main.row.m-0
+        section#left.col-lg-5.left-col-pad
+            if !connected
+                div#system-row.row.mx-0
+                    include cards/connect.pug
+            else
+                div#system-row.row.mx-0
+                    include cards/system.pug
+
+                div#nodes-row.row.mx-0.middle-row-pad
+                    include cards/nodes.pug
+
+                div#logs-row.row.mx-0
+                    include cards/logs.pug
+
+        section#right.col.right-col-pad
+            if connected
+                div.row.mx-0.full-height-row
+                    include cards/building.pug
